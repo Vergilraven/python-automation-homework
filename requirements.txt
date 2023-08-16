@@ -1,0 +1,11 @@
+multidict
+typing_extensions
+attr
+yarl
+async_timeout
+idna_ssl
+alibabacloud-ecs20140526
+alibabacloud_rds20140815==2.1.4
+aliyun-python-sdk-core
+aliyun-python-sdk-ecs
+aliyun-python-sdk-rds
