@@ -218,13 +218,13 @@ class automation(prefetch):
 
         # 单击用户名 传递参数
         pyautogui.click(x=1289,y=712,button="left")
-        pyperclip.copy('heyefeng_vpn')
+        pyperclip.copy('')
         pyautogui.hotkey('ctrl','v')
         time.sleep(1)
 
         # 单击密码 传递参数
         pyautogui.click(x=1304,y=772,button="left")
-        pyperclip.copy('fM1tQnoD84kRaEtX')
+        pyperclip.copy('')
         pyautogui.hotkey('ctrl','v')
         time.sleep(1)
 
