@@ -1,11 +1,3 @@
-# 此程序终态目标:
-# 1. 从一个脚本变成一个全自动程序
-# 2. 可以自动更新本地电脑上的chrome.webdriver的版本
-# 3. 可以根据状态自动切换对应的策略
-# 4. 使用线性代数实现动态传网页坐标
-# Author: Vergil He
-# Email: 691267837@qq.com
-
 import time,xlrd,socket
 import pyautogui,pyperclip
 import paramiko
@@ -46,8 +38,6 @@ class prefetch:
         self.versionlist = []
         self.chrome_download_path = 'chrome://downloads/'
 
-    # 无效代码
-    # 因为百度官方调整了原有ip的访问位置所以弃用该方法
     # @property
     # def getlocalip(self):
     #     print('请稍后正在获取本机的公网ip地址')
@@ -72,10 +62,7 @@ class prefetch:
         except:
             return None
 
-    # 用webdriver和使用本地chrome打开的浏览器下载路径默认设置路径没有调整是不一样的
     # def clean_chrome_download(self):
-    #     # 清除浏览器下载文件夹
-    #     print('启动浏览器下载文件夹清理策略')
     #     self.browser.get(self.chrome_download_path)
     #     time.sleep(50)
 
@@ -124,7 +111,6 @@ class automation(prefetch):
             import sys
             sys.exit()
 
-    # 无效方法
     def cleantrash(self):
         # parameter = '--user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like GeSjtu@1997cko) Chrome/111.0.0.0 Safari/537.36"'
         win32api.ShellExecute(0,'open',self.chromexcute,self.chrome_download_path,'',1)
@@ -150,8 +136,6 @@ class automation(prefetch):
             raise e
 
         if google_status_code == 200:
-            print('谷歌的状态码正常,正在为您争取资源')
-            print('正在查询最新版本的信息...')
             chrome_version_list = ['70','72','73','74','75','76','77','78','79','80','81','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112']
             while True:
                 last_num_version = str(chrome_version_list[-1])
