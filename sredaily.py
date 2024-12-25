@@ -818,7 +818,7 @@ if __name__ == '__main__':
     # chromedriver = prefetch()
     # chromedriver.clean_chrome_download()
     # automation类的自测
-    login_account = "正义果子李"
+    login_account = ""
     print('当前登录用户名为:',login_account)
     login_passwd = getpass("请输入您的账号密码: ")
     # devops_command = 'jenkins'
